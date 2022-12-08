@@ -1,8 +1,9 @@
 .clients {
     @extend %list;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 30px;
+//     gap: 30px;
 }
 
 .clients__thumb {
@@ -10,11 +11,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30px;
-    width: 170px;
+    width: calc((100% - 30px) / 2);
     height: 92px;
     border: 1px solid #afb1b8;
     border-radius: 4px;
+    
+//     width: 170px;
 
     &:hover,
     &:focus {

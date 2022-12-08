@@ -48,31 +48,40 @@ h6 {
   margin: -1px;
 }
 
-.work__link, .address__link, .clients__thumb, .auth__link, .nav__item, .social-network__link, .logo {
+.work__link, .clients__thumb, .social-network__link, .logo {
   text-decoration: none;
 }
 
-.work, .filter, .address__list, .clients, .team__list, .activities__list, .advantages__list, .auth, .nav__list, .social-network {
+.work, .filter, .address__list, .clients, .team__list, .activities__list, .advantages__list, .social-network {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
 .container {
-  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
-  outline: black;
+}
+@media screen and (min-width: 480px) {
+  .container {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
 }
 
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
-.section--no-top-padding {
-  padding-top: 0;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .logo {
@@ -100,97 +109,17 @@ h6 {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.page-header {
-  border-bottom: 1px solid #ececec;
-}
-
-.page-header__container {
-  display: flex;
-  align-items: center;
-}
-
 .logo--header {
   color: #000000;
 }
 
-.nav {
-  display: flex;
-  align-items: center;
-}
-
-.nav__list {
-  display: flex;
-  gap: 50px;
-  margin-left: 93px;
-}
-
-.nav__item {
-  position: relative;
-  display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
-  font-weight: 500;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  color: #212121;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.nav__item:hover, .nav__item:focus {
-  color: #2196f3;
-}
-
-.nav__item--current {
-  color: #2196f3;
-}
-.nav__item--current::after {
-  content: "";
-  position: absolute;
-  display: block;
-  bottom: -1px;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
-  background-color: #2196f3;
-}
-
-.auth {
-  display: flex;
-  gap: 50px;
-  margin-left: auto;
-}
-
-.auth__link {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  padding-top: 32px;
-  padding-bottom: 32px;
-  font-weight: 500;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  color: #757575;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.auth__link:hover, .auth__link:focus {
-  color: #2196f3;
-}
-
-.auth__icon {
-  fill: #757575;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.auth__link:hover .auth__icon, .auth__link:focus .auth__icon {
-  fill: #2196f3;
-}
-
 .hero-section {
-  height: 600px;
-  max-width: 1600px;
+  height: 400px;
+  width: 480px;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/group-of-people.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -202,8 +131,8 @@ h6 {
   margin-top: 0;
   margin-bottom: 30px;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.61;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #ffffff;
@@ -229,18 +158,13 @@ h6 {
   background-color: #188ce8;
 }
 
-.advantages__list {
-  display: flex;
-  gap: 30px;
-}
-
 .advantages__item {
-  width: calc((100% - 90px) / 4);
+  display: block;
+  margin-bottom: 30px;
 }
 
 .advantages__thumb {
   display: flex;
-  width: 270px;
   height: 120px;
   background: #f5f4fa;
   border-radius: 4px;
@@ -254,11 +178,18 @@ h6 {
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .advantages__text {
   margin: 0;
   line-height: 1.71;
+}
+
+@media screen and (max-width: 1199px) {
+  .activities {
+    display: none;
+  }
 }
 
 .activities__list {
@@ -291,7 +222,6 @@ h6 {
 }
 
 .team__list {
-  display: flex;
   gap: 30px;
 }
 
@@ -300,17 +230,21 @@ h6 {
 }
 
 .team__card {
-  width: calc((100% - 90px) / 4);
   text-align: center;
   background-color: #ffffff;
-  padding-bottom: 30px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+  padding-bottom: 24px;
+}
+@media screen and (max-width: 767px) {
+  .team__card:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 
 .team__information {
   font-size: 16px;
-  line-height: 1.19;
+  line-height: 1.17;
 }
 
 .team__title {
@@ -339,16 +273,15 @@ h6 {
 
 .clients {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 30px;
 }
 
 .clients__thumb {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 30px;
-  width: 170px;
+  width: calc((100% - 30px) / 2);
   height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
@@ -366,16 +299,6 @@ h6 {
   fill: #2196f3;
 }
 
-.page-footer {
-  padding-top: 60px;
-  padding-bottom: 60px;
-  background-color: #2f303a;
-}
-
-.page-footer__container {
-  display: flex;
-}
-
 .page-footer__logo {
   display: inline-block;
   margin-bottom: 20px;
@@ -383,104 +306,6 @@ h6 {
 
 .logo--footer {
   color: #ffffff;
-}
-
-.address-container {
-  min-width: 231px;
-  margin-right: 70px;
-}
-
-.address__link {
-  display: inline-block;
-  font-style: normal;
-  line-height: 1.71;
-  color: #ffffff;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.address__link:hover, .address__link:focus {
-  color: #2196f3;
-}
-
-.address__item {
-  margin-bottom: 9px;
-}
-.address__item:last-child {
-  margin-bottom: 0;
-}
-
-.address__contact {
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.network-container {
-  margin-top: 15px;
-}
-
-.network-container__text,
-.subscribe__text {
-  margin-bottom: 20px;
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 1.14;
-  text-transform: uppercase;
-  color: #ffffff;
-}
-
-.social-network__link--footer {
-  background-color: rgba(255, 255, 255, 0.1);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.social-network__link--footer:hover, .social-network__link--footer:focus {
-  background-color: #2196f3;
-}
-
-.social-network__icon--footer {
-  fill: #ffffff;
-}
-
-.subscribe {
-  margin-top: 15px;
-  margin-left: 93px;
-}
-
-.subscribe__form {
-  display: flex;
-  align-items: center;
-}
-
-.subscribe__email-input {
-  min-width: 358px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  padding-left: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-  border-radius: 4px;
-  background-color: transparent;
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.subscribe__button {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  min-width: 200px;
-  border-radius: 4px;
-  padding: 10px 28px;
-  margin-left: 12px;
-  font-family: inherit;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
-  letter-spacing: 0.06em;
-  color: #ffffff;
-  background-color: #2196f3;
-  border: none;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.subscribe__button:hover, .subscribe__button:focus {
-  background-color: #188ce8;
 }
 
 .backdrop {
