@@ -1,0 +1,36 @@
+.clients {
+    @extend %list;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.clients__thumb {
+    @extend %link;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 170px;
+    height: 92px;
+    border: 1px solid #afb1b8;
+    border-radius: 4px;
+
+    &:hover,
+    &:focus {
+            border-color: $brand-color;
+        }
+
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.clients__icon {
+    fill: #afb1b8;
+
+    .clients__thumb:hover &,
+    .clients__thumb:focus & {
+            fill: $brand-color;
+        }
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}

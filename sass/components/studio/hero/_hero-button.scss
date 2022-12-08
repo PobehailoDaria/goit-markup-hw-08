@@ -1,0 +1,22 @@
+.hero-section__button {
+    display: inline-block;
+    border-radius: 4px;
+    min-width: 216px;
+    padding: 10px 32px;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: $secondary-font-size;
+    line-height: 1.88;
+    letter-spacing: $secondary-letter-spacing;
+    color: $white-color;
+    background-color: $brand-color;
+    border: none;
+    box-shadow: 0px 4px 4px $hero-button-shadow;
+
+    &:hover,
+    &:focus {
+            background-color: $hero-button-accent;
+        }
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}

@@ -1,0 +1,9 @@
+.team__list {
+    @extend %list;
+    display: flex;
+    gap: 30px;
+}
+
+.team {
+    background-color: $light-background-color;
+}
