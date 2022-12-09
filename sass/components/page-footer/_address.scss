@@ -1,35 +1,37 @@
-// .address-container {
+.address-container {
+text-align: center;
 //     min-width: 231px;
 //     margin-right: 70px;
-// }
+}
 
 .address__list {
     @extend %list;
 }
 
-// .address__link {
-//     @extend %link;
+.address__link {
+    @extend %link;
 //     display: inline-block;
-//     font-style: normal;
-//     line-height: 1.71;
-//     color: $white-color;
+    font-style: normal;
+    line-height: 1.71;
+    color: $white-color;
 
-//     &:hover,
-//     &:focus {
-//         color: $brand-color;
-//     }
+    &:hover,
+    &:focus {
+        color: $brand-color;
+    }
 
-//     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-// }
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
-// .address__item {
+.address__item {
+    margin-bottom: 8px;
 //     margin-bottom: 9px;
 
-//     &:last-child {
-//             margin-bottom: 0;
-//         }
-// }
+    &:last-child {
+            margin-bottom: 0;
+        }
+}
 
-// .address__contact {
-//     color: $transparent-color;
-// }
+.address__contact {
+    color: $transparent-color;
+}

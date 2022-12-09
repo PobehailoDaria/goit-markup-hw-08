@@ -1,6 +1,8 @@
 .hero-section {
-    height: 400px;
-    width: 480px;
+    @media screen and (min-width: $mobile) {width: $mobile;
+            height: 400px;
+    }
+    // width: 480px;
     margin-left: auto;
     margin-right: auto;
     padding-top: 118px;
