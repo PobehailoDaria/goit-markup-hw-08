@@ -2,7 +2,10 @@
     @extend %link;
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
-    font-size: 26px;
+    font-size: 24px;
     line-height: $secondary-line-height;
     color: $brand-color;
+
+    @media screen and (min-width: $desktop) {font-size: 26px; 
+    }
 }

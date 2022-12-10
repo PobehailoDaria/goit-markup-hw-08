@@ -1,0 +1,29 @@
+.menu-socials {
+    @extend %list;
+    display: flex;
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+    font-weight: 500;
+    @media screen and (min-width: $tablet) {display: none;
+    }
+}
+
+.menu-socials__item {
+    &:not(:first-child) {
+            padding-left: 10px;
+        }
+    
+        &:not(:last-child) {
+            padding-right: 10px;
+            border-right: 1px solid rgba(33, 33, 33, 0.2);
+    
+        }
+}
+
+.menu-socials__link {    
+    @extend %link;
+    display: block;
+    color: $brand-color;
+    
+}

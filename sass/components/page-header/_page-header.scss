@@ -1,8 +1,46 @@
-// .page-header {
-//     border-bottom: 1px solid #ececec;
-// }
+.page-header {
+    position: relative;
+    @media screen and (max-width: 767px) 
+    {padding-top: 10px;
+    padding-bottom: 10px;
+    }
 
-// .page-header__container {
-//     display: flex;
-//     align-items: center;
-// }
+//     border-bottom: 1px solid #ececec;
+}
+
+.page-header__container {
+    display: flex;
+    align-items: center;
+}
+
+.menu-button {
+    display: inline-flex;
+    margin-left: auto;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+}
+
+.menu-button .menu-close {
+    opacity: 0;
+}
+
+.menu-button.is-open .menu-close {
+    opacity: 1;
+}
+
+.menu-button.is-open .menu-open {
+    opacity: 0;
+}
+
+.menu-container {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+
+    padding-left: 40px;
+    padding-bottom: 48px;
+
+    background-color: $white-color;
+}
